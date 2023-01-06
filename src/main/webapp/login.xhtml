@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Hello World</title>
+
+</h:head>
+<h:body>
+	<h3>Input Text Example</h3>
+	<h:form>
+	UserName: <h:inputText id="uname" value="#{user.userName}">
+	<f:validator validatorId="com.training.jsf.validator.UserVerification" />
+			<f:validateLength minimum="4" maximum="8"></f:validateLength>
+		</h:inputText>
+		<h:message for="uname" style="color:red"></h:message>
+		<br></br>
+		<br></br>
+	
+	Password: <h:inputSecret id="pass" value="#{user.password}"
+			required="true">
+			<f:validateLength minimum="7" maximum="8"></f:validateLength>
+		</h:inputSecret>
+		<h:message for="pass" style="color:red"></h:message>
+		<br></br>
+		<br></br>
+		
+	 Email: <h:inputText id="email" value="#{user.email}" required="true">
+			<f:validator validatorId="com.training.jsf.validator.EmailValidator" />
+		</h:inputText>
+		<br />
+		<br />
+		<h:commandButton value="Hello" action="#{user.sayHi}"></h:commandButton>
+	</h:form>
+
+
+</h:body>
+</html>
