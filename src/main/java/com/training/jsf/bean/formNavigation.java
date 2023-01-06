@@ -12,6 +12,6 @@ public class formNavigation {
 	public String displayWelcomePage() {
 		return "welcome";
 	}
-	
+
 
 }

@@ -1,7 +1,6 @@
 package com.training.jsf.bean;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 
 @ManagedBean(name="user")
@@ -10,8 +9,8 @@ public class User {
 	private String userName;
 	private String password;
 	private String email;
-	
-	
+
+
 	public String getEmail() {
 		return email;
 	}

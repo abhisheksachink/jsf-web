@@ -13,16 +13,16 @@ import javax.faces.validator.ValidatorException;
 @FacesValidator("com.training.jsf.validator.EmailValidator")
 public class EmailValidator implements Validator{
 	private static final String EMAIL_PATTER="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-	
+
 	private Pattern pattern;
 	private Matcher matcher;
-	
+
 	public EmailValidator() {
 		pattern = Pattern.compile(EMAIL_PATTER);
 	}
 	@Override
 public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
-		
+
 		matcher = pattern.matcher(value.toString());
 		if(!matcher.matches()) {
 			FacesMessage msg = new FacesMessage("Email Validation Failed..");

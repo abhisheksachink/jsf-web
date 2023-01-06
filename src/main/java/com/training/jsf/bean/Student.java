@@ -1,17 +1,13 @@
 package com.training.jsf.bean;
 
-import java.util.Arrays;
-
-
-
 public class Student {
 	private String usrClass;
 	private String name;
 	private int rollNo;
 	private int age;
-	
-	
-	
+
+
+
 	public Student(String name,String usrClass, int rollNo, int age) {
 		super();
 		this.usrClass = usrClass;

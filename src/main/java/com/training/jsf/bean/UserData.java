@@ -15,19 +15,19 @@ public class UserData {
 	private String name;
 	private int rollNo;
 	private int age;
-	
+
 	private static final List<Student> studList =new ArrayList<>(Arrays.asList(
 			new Student("Rohan","Civil",101,21),
 			new Student("Priya","Cs",103,21),
 			new Student("Titu","mechanical",102,23)));
-	
+
 	public List<Student> getStudents(){
 		return studList;
 	}
 	public void addStudent() {
 		studList.add(new Student(name,usrClass,rollNo,age));
 	}
-	
+
 	public String getUsrClass() {
 		return usrClass;
 	}

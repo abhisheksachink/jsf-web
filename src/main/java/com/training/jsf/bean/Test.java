@@ -3,13 +3,12 @@ package com.training.jsf.bean;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name="test")
 @RequestScoped
 public class Test {
 	@ManagedProperty(value="#{param.pageId}")
-	
+
 	private String pageId;
 
 	public String getPageId() {
@@ -19,7 +18,7 @@ public class Test {
 	public void setPageId(String pageId) {
 		this.pageId = pageId;
 	}
-	
+
 	public String displayPage() {
 		if(pageId ==null) {
 			return "helloworld";
